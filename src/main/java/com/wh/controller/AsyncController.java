@@ -1,13 +1,36 @@
 package com.wh.controller;
 
+import java.util.UUID;
 import java.util.concurrent.Callable;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.context.request.async.DeferredResult;
+
+import com.wh.DeferredResultQueue;
 
 @Controller
 public class AsyncController {
+	
+	@ResponseBody
+	@RequestMapping("/createOrder")
+	public DeferredResult<Object> creatOrder() {
+		DeferredResult<Object> deferredResult = new DeferredResult<Object>((long)3000,"creatOrder");
+		
+		DeferredResultQueue.save(deferredResult);
+		return deferredResult;
+		
+	}
+	
+	@ResponseBody
+	@RequestMapping("/create")
+	public String create() {
+		String order = UUID.randomUUID().toString();
+		DeferredResult<Object> deferredResult = DeferredResultQueue.get();
+		deferredResult.setResult(order);
+		return "success==>"+order;
+	}
 
 	/**
 	 * 1.¿ØÖÆÆ÷·µ»ØCallable
