@@ -16,7 +16,7 @@ public class AsyncController {
 	@ResponseBody
 	@RequestMapping("/createOrder")
 	public DeferredResult<Object> creatOrder() {
-		DeferredResult<Object> deferredResult = new DeferredResult<Object>((long)3000,"creatOrder");
+		DeferredResult<Object> deferredResult = new DeferredResult<Object>((long)3000,"creat Order is failed!");
 		
 		DeferredResultQueue.save(deferredResult);
 		return deferredResult;
