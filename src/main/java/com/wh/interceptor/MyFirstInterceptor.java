@@ -12,7 +12,7 @@ public class MyFirstInterceptor implements HandlerInterceptor {
 	public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler)
 			throws Exception {
 		// TODO Auto-generated method stub
-		System.out.println("preHandle....");
+		System.out.println("preHandle...."+request.getRequestURL());
 		return true;
 	}
 
