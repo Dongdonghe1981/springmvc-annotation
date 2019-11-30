@@ -5,9 +5,8 @@
 2.	加载这个文件指定的类org.springframework.web.SpringServletContainerInitializer
 3.	Spring应用启动时会加载WebApplicationInitializer接口下的所有组件
 4.	为这些组件创建对象（组件不是接口，不是抽象类）
-
-	AbstractContextLoaderInitializer：
-	 	创建一个根容器createRootApplicationContext()
+* AbstractContextLoaderInitializer：
+    > 创建一个根容器createRootApplicationContext()
 	AbstractDispatcherServletInitializer：
 		创建一个Web的IOC容器createServletApplicationContext()
 		创建一个DispatcherServlet，createDispatcherServlet()
