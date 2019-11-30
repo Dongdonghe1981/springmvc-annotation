@@ -8,12 +8,12 @@
 * AbstractContextLoaderInitializer：
     > 创建一个根容器createRootApplicationContext()
 * AbstractDispatcherServletInitializer：
-    > 创建一个Web的IOC容器createServletApplicationContext()
-    > 创建一个DispatcherServlet，createDispatcherServlet()
+    > 创建一个Web的IOC容器createServletApplicationContext()<br/>
+    > 创建一个DispatcherServlet，createDispatcherServlet()<br/>
     > 将创建的DispatcherServlet添加到ServletContext中
 * AbstractAnnotationConfigDispatcherServletInitializer
-    > 注解方式配置的DispatchServlet初始化器
-    > 创建一个根容器createRootApplicationContext()
+    > 注解方式配置的DispatchServlet初始化器<br/>
+    > 创建一个根容器createRootApplicationContext()<br/>
     > 创建一个Web的IOC容器createServletApplicationContext()
 
 ##### 总结：
