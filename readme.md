@@ -7,14 +7,14 @@
 4.	为这些组件创建对象（组件不是接口，不是抽象类）
 * AbstractContextLoaderInitializer：
     > 创建一个根容器createRootApplicationContext()
-	AbstractDispatcherServletInitializer：
-		创建一个Web的IOC容器createServletApplicationContext()
-		创建一个DispatcherServlet，createDispatcherServlet()
-		将创建的DispatcherServlet添加到ServletContext中
-	AbstractAnnotationConfigDispatcherServletInitializer
-		注解方式配置的DispatchServlet初始化器
-		创建一个根容器createRootApplicationContext()
-		创建一个Web的IOC容器createServletApplicationContext()
+* AbstractDispatcherServletInitializer：
+    > 创建一个Web的IOC容器createServletApplicationContext()
+    > 创建一个DispatcherServlet，createDispatcherServlet()
+    > 将创建的DispatcherServlet添加到ServletContext中
+* AbstractAnnotationConfigDispatcherServletInitializer
+    > 注解方式配置的DispatchServlet初始化器
+    > 创建一个根容器createRootApplicationContext()
+    > 创建一个Web的IOC容器createServletApplicationContext()
 
 ##### 总结：
 以注解的方式来启动SpringMVC，继承AbstractAnnotationConfigDispatcherServletInitializer，实现抽象方法指定DispatchServlet的配置信息。
